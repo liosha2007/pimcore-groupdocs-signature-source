@@ -4,7 +4,7 @@ GroupDocs Signature plugin for PimCore CMS (Source)
 
 ### Plugin Manual Installation Instructions:
 
-1. Copy plugin folder to '/path-to-installed-pimcore/plugins' directory.
+1. Copy plugin files to '/path-to-installed-pimcore/plugins/GroupDocsSignature' directory.
 2. Login to pimcore as admin
 3. Go to "Extras"=>"Extensions"=>"Manage Extensions"
 4. Click button "Enamble/Disable" and "Install/Unistall"
@@ -37,6 +37,6 @@ Also you can override default params like:
 ###[Sign, Manage, Annotate, Assemble, Compare and Convert Documents with GroupDocs](http://groupdocs.com)
 * [Doc to PDF, Doc to Docx, PPT to PDF, and other Document Conversions with GroupDocs Signature](http://groupdocs.com/apps/signature)
 * [DOC, DOCX, PDF Signature in your PimCore CMS website] (http://www.pimcore.org/resources/extensions/detail/GroupDocsSignature)
-* [See source code for GroupDocs Signature plugin for PimCore CMS](https://github.com/groupdocs/pimcore-groupdocs-signature-source)
+* [See source code for GroupDocs Signature plugin for PimCore CMS](https://github.com/liosha2007/pimcore-groupdocs-signature-source)
 
 ###Created by [GroupDocs Marketplace Team](http://groupdocs.com/marketplace/).
