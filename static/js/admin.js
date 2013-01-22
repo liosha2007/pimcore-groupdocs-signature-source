@@ -56,13 +56,13 @@ pimcore.plugin.GroupDocsSignature = Class.create(pimcore.plugin.admin, {
 					items : [
 						{
 							xtype : 'label',
-							text : 'File ID: ',
+							text : 'Form ID: ',
 							style: 'margin: 8px 3px 3px 8px;'
 						},
 						{
                             xtype: 'textfield',
-                            id : 'fileid',
-                            value: objAjax.configs.fileid,
+                            id : 'formid',
+                            value: objAjax.configs.formid,
                             width: 250,
                             allowBlank: false,
                             style: 'margin: 8px 3px 3px 3px;'
@@ -124,14 +124,14 @@ pimcore.plugin.GroupDocsSignature = Class.create(pimcore.plugin.admin, {
 		pimcore.layout.refresh();
 	}, 
 	saveClick : function () {
-		var fileid = Ext.getCmp('fileid').getValue();
+		var formid = Ext.getCmp('formid').getValue();
 		var frameborder = Ext.getCmp('frameborder').getValue();
 		var width = Ext.getCmp('width').getValue();
 		var height = Ext.getCmp('height').getValue();
         Ext.Ajax.request({
 					url : '/plugin/GroupDocsSignature/group-docs-signature-admin/savedata',
 					params: {
-						'fileid' : fileid,
+						'formid' : formid,
 						'frameborder' : frameborder,
 						'width' : width,
 						'height' : height

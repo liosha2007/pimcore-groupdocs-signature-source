@@ -8,13 +8,13 @@ class GroupDocsSignature_Plugin extends Pimcore_API_Plugin_Abstract implements P
 	public static function install() {
 		Pimcore_API_Plugin_Abstract::getDb()->query("CREATE TABLE IF NOT EXISTS `plugin_groupdocs` (
 			`id` INTEGER,
-	        `fileid` varchar(255) DEFAULT '0',
+	        `formid` varchar(255) DEFAULT '0',
 	        `frameborder` INTEGER DEFAULT 0,
 	        `width` INTEGER DEFAULT 480,
 			`height` INTEGER DEFAULT 320,
 				PRIMARY KEY  (`id`)
 				) ENGINE=MyISAM DEFAULT CHARSET=utf8;");
-		Pimcore_API_Plugin_Abstract::getDb()->query("INSERT INTO `plugin_groupdocs` (`id`, `fileid`, `frameborder`, `width`, `height`) VALUES (1, '0', 0, 480, 320);");
+		Pimcore_API_Plugin_Abstract::getDb()->query("INSERT INTO `plugin_groupdocs` (`id`, `formid`, `frameborder`, `width`, `height`) VALUES (1, '0', 0, 480, 320);");
 
 		if (self::isInstalled()) {
 			return "GroupDocs Signature Plugin successfully installed.";

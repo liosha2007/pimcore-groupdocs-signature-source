@@ -8,7 +8,7 @@ class GroupDocsSignature_GroupDocs {
 	/**
 	 * GroupDocs file ID
 	 */
-	protected $_fileid = 0;
+	protected $_formid = 0;
 
 	/**
 	 * Html frame border
@@ -32,7 +32,7 @@ class GroupDocsSignature_GroupDocs {
 	public function __construct($config = array()) {
 		$this->_config = new GroupDocsSignature_Config();
 		// Set file ID
-		$this->_fileid = (empty($config['fileid'])) ? $this->getConfig('fileid') : $config['fileid'];
+		$this->_formid = (empty($config['formid'])) ? $this->getConfig('formid') : $config['formid'];
 		// Set frameborder
 		$this->_frameborder = (empty($config['frameborder'])) ? $this->getConfig('frameborder') : $config['frameborder'];
 		// Set width
@@ -64,9 +64,9 @@ class GroupDocsSignature_GroupDocs {
 	 * Render html frame
 	 */
 	public function renderFrame() {
-		return '<iframe src="https://apps.groupdocs.com/document-signature/Embed/'
-				. $this->_fileid
-				. '?quality=50&use_pdf=False&download=False&referer=PimCore/1.0" frameborder="'
+		return '<iframe src="https://apps.groupdocs.com/signature/forms/SignEmbed/'
+				. $this->_formid
+				. '?referer=PimCore/1.0" frameborder="'
 				. $this->_frameborder
 				. '" width="'
 				. $this->_width

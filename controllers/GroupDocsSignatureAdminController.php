@@ -10,7 +10,7 @@ class GroupDocsSignature_GroupDocsSignatureAdminController extends Pimcore_Contr
 		$this->_helper->json(array('configs' =>
 				array(
 						'id' => '1',
-						'fileid' => $conf->getConfig('fileid'),
+						'formid' => $conf->getConfig('formid'),
 						'frameborder' => $conf->getConfig('frameborder'),
 						'width' => $conf->getConfig('width'),
 						'height' => $conf->getConfig('height')
@@ -24,12 +24,12 @@ class GroupDocsSignature_GroupDocsSignatureAdminController extends Pimcore_Contr
 	public function savedataAction(){
 		$conf = new GroupDocsSignature_GroupDocs();
 
-		$fileid = $this->_getParam("fileid");
+		$formid = $this->_getParam("formid");
 		$frameborder = $this->_getParam("frameborder");
 		$width = $this->_getParam("width");
 		$height = $this->_getParam("height");
-		if ($fileid != '' && $frameborder != '' && $width != '' && $height != '') {
-			$conf->setConfig(array( 'fileid' => $fileid, 'frameborder' => $frameborder, 'width' => $width, 'height' => $height ));
+		if ($formid != '' && $frameborder != '' && $width != '' && $height != '') {
+			$conf->setConfig(array( 'formid' => $formid, 'frameborder' => $frameborder, 'width' => $width, 'height' => $height ));
 			$this->getResponse()->setHttpResponseCode(200);
 		}
 		else {
