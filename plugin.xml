@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zend-config xmlns:zf="http://framework.zend.com/xml/zend-config-xml/1.0/">
+	<plugin>
+		<pluginName>GroupDocsSignature</pluginName>
+		<pluginDescription>GroupDocs Signature Plugin for PimCore CMS</pluginDescription>
+		<pluginNiceName>GroupDocs Signature Plugin</pluginNiceName>
+		<pluginIcon>/plugins/GroupDocsSignature/static/img/icon.png</pluginIcon>
+		<pluginVersion>1.0</pluginVersion>
+		<pluginRevision>1</pluginRevision>
+		<pluginBuildTimestamp>0</pluginBuildTimestamp>
+		<pluginClassName>GroupDocsSignature_Plugin</pluginClassName>
+		<pluginIncludePaths>
+			<path>/GroupDocsSignature/lib</path>
+            <path>/GroupDocsSignature/models</path>
+            <path>/GroupDocsSignature/controllers</path>
+		</pluginIncludePaths>
+		<pluginNamespaces>
+			<namespace>GroupDocsSignature</namespace>
+		</pluginNamespaces>
+		<pluginJsPaths>
+			<path>/GroupDocsSignature/static/js/admin.js</path>
+		</pluginJsPaths>
+        <pluginCssPaths>
+            <path>/GroupDocsSignature/static/css/admin.css</path>
+        </pluginCssPaths>
+	</plugin>
+</zend-config>
